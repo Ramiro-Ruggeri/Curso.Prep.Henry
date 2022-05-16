@@ -61,26 +61,28 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
-if(color==="blue"){
-  return "This is blue";
-}else if(color===red){
-  return "This is red";
-}else if(color==="green"){
-  return "This is green";
-}else if(color==="orange"){
-  return "This ir orange";
-}
-return "Color not found"; 
+ switch (color) {
+   case "blue":
+     return "This is blue";
+   case "red":
+     return "This is red";
+   case "green":
+     return "This is green";
+   case "orange":
+     return "This is orange"; 
+    default:
+      return "Color not found";
+ }
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(numero===10||5){
+  if(numero===10||numero===5){
     return true;
-  }
-  return false;
+  } else if(numero!==10||numero!==5)
+    return false;
 }
 
 function estaEnRango(numero) {
@@ -156,6 +158,7 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+
 }
 
 
