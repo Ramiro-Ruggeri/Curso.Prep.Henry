@@ -121,18 +121,23 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if(arguments.length<1) return 0;
+  var multiplicar= 1;
+  for(var i = 0; i<arguments.length; i++){
+    multiplicar= multiplicar * arguments[i];
+  }
+  return multiplicar;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
- var creada = arreglo[0];
+ var cuentoElementos = 0;
  for (var i=0; i<arreglo.length; i++){
-   if(creada>18){
-     return creada;
-   }
+   if(arreglo[i]>18) cuentoElementos++;
  }
+ return cuentoElementos;
 }
 
 
@@ -140,8 +145,10 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí  
+
+  if(numeroDeDia===1 || numeroDeDia===7 ) return "Es fin de semana";
+  if(numeroDeDia>1 && numeroDeDia<=6) return "Es dia Laboral";
 } 
 
 
